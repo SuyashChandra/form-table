@@ -1,0 +1,47 @@
+input:focus,
+select:focus {
+	outline: none;
+}
+.NewTodoForm {
+	margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.NewTodoForm input,
+.NewTodoForm select {
+	flex-grow: 1;
+	border: none;
+	background: #d6d6d6;
+	/* padding: 0 1.5em; */
+	font-size: initial;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+.NewTodoForm select {
+	position: relative;
+	display: inline-block;
+	top: -0.7em;
+}
+label {
+	position: relative;
+	top: 2.5rem;
+	display: inline-block;
+	font-size: 0.6rem;
+}
+.NewTodoForm button {
+	padding: 0 1.3rem;
+	border: none;
+	background: #2c4e85;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	margin-left: 5px;
+	cursor: pointer;
+	transition: background 0.2s ease-out;
+}
+.NewTodoForm input,
+.NewTodoForm button,
+.NewTodoForm select {
+	font-family: "Quicksand", sans-serif;
+	height: 2rem;
+}
