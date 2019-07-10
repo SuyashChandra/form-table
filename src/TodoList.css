@@ -1,26 +1,74 @@
 .TodoList {
 	margin: 4rem auto;
-	padding: 2rem 3rem 3rem;
-	max-width: 500px;
+	padding: 2rem 0rem 3rem;
+	/* max-width: 500px; */
 	background: d6d6d6;
 	color: #212121;
-	box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.1);
 }
-.TodoList ul {
-	margin-top: 2.6rem;
-	list-style: none;
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.5em;
+	background-color: white;
+	height: 10vh;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 6px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	box-shadow: 3px 4px 0px 0px rgba(100, 100, 100, 0.3);
+}
+.left {
+	padding-left: 40px;
+}
+.right {
+	padding-right: 40px;
+	font-size: 0.8em;
+	letter-spacing: 0.08em;
 }
 
-.TodoList h1 {
+/* .TodoList h1 {
 	font-weight: normal;
 	font-size: 2.6rem;
 	letter-spacing: 0.05rem;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.TodoList h1 span {
+} */
+/* .TodoList h1 span {
 	display: block;
 	font-size: 0.8rem;
 	margin-bottom: 0.7rem;
 	margin-left: 3px;
 	margin-top: 0.2rem;
+} */
+.Table {
+	font-size: 17px;
+	line-height: 1.5;
+	color: #1b1b1b;
+	background-color: #ffffff;
+	margin: 50px auto;
+	/* width: 100%; */
+	box-shadow: -3px 4px 0px 0px rgba(100, 100, 100, 0.1);
+	border-radius: 5px;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+td,
+th {
+	padding: 10px 20px 10px;
+	text-align: left;
+	font-size: 1rem;
+	font-weight: normal;
+}
+table caption {
+	text-align: left;
+	font-size: 1.3rem;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+	padding: 10px 20px 10px;
+}
+.width {
+	width: 100%;
+	padding: 10px 20px 40px;
 }

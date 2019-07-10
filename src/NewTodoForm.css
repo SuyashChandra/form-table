@@ -1,6 +1,11 @@
 input:focus,
 select:focus {
 	outline: none;
+	border: none;
+}
+
+select::-ms-expand {
+	display: none;
 }
 .NewTodoForm {
 	margin-top: 3rem;
@@ -11,22 +16,24 @@ select:focus {
 .NewTodoForm select {
 	flex-grow: 1;
 	border: none;
-	background: #d6d6d6;
+	background: #f0f6fc;
 	/* padding: 0 1.5em; */
 	font-size: initial;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+	width: 100%;
 }
-.NewTodoForm select {
+
+/* .NewTodoForm select {
 	position: relative;
 	display: inline-block;
 	top: -0.7em;
-}
-label {
+} */
+/* label {
 	position: relative;
 	top: 2.5rem;
 	display: inline-block;
 	font-size: 0.6rem;
-}
+} */
 .NewTodoForm button {
 	padding: 0 1.3rem;
 	border: none;
@@ -44,4 +51,20 @@ label {
 .NewTodoForm select {
 	font-family: "Quicksand", sans-serif;
 	height: 2rem;
+}
+
+.NewTodoForm table {
+	width: 100%;
+}
+.table {
+	width: 100%;
+}
+.button {
+	padding: 20px 20px 10px;
+}
+button:first-of-type {
+	margin-right: 25px;
+}
+button {
+	box-shadow: 2px 2px 0px 0px rgba(100, 100, 100, 0.3);
 }

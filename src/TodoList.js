@@ -44,27 +44,48 @@ class TodoList extends Component {
 	render() {
 		const todos = this.state.todos.map((todo) => {
 			return (
-				<Todo
-					key={todo.id}
-					id={todo.id}
-					username={todo.username}
-					name={todo.name}
-					password={todo.password}
-					userType={todo.userType}
-					completed={todo.completed}
-				/>
+				// <Todo
+				// 	key={todo.id}
+				// 	id={todo.id}
+				// 	username={todo.username}
+				// 	name={todo.name}
+				// 	password={todo.password}
+				// 	userType={todo.userType}
+				// 	completed={todo.completed}
+				// />
+				<tr>
+					<th>{todo.username}</th>
+					<th>{todo.name}</th>
+					<th>{todo.password}</th>
+					<th>{todo.userType}</th>
+				</tr>
 			);
 		});
 		return (
 			<div className="TodoList">
-				<h1>
-					Todo List! <span>A simple React Todo List App.</span>
-				</h1>
+				<div className="top">
+					<div className="left">
+						<h1>Add User</h1>
+					</div>
+					<div className="right">
+						<h1>App > AddUser Page</h1>
+					</div>
+				</div>
 				<NewTodoForm createTodo={this.create} />
-
-				<table>
-					<td>{todos}</td>
-				</table>
+				<div className="Table">
+					<table className="width">
+						<caption>Users Table</caption>
+						<thead>
+							<tr>
+								<th>Username</th>
+								<th>Name</th>
+								<th>Password</th>
+								<th>TypeofUser</th>
+							</tr>
+						</thead>
+						<tbody>{todos}</tbody>
+					</table>
+				</div>
 			</div>
 		);
 	}
