@@ -5,28 +5,28 @@ import './NewTodoForm.css';
 class NewTodoForm extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { usename: '', name: '', password: '', userType: '' };
+		this.state = { usename: '', name: '', password: '', userType: '' };            //We define a state here with basically the column names
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleClear = this.handleClear.bind(this);
 	}
-	handleChange(evt) {
+	handleChange(evt) {                                                                   //function so that we can change the state in real-time. As we type in the inputs, the state in react will change
 		this.setState({
-			[evt.target.name]: evt.target.value
-		});
+			[evt.target.name]: evt.target.value                                  //generic method. We use evt.target.name so that we  dont have to make sepater methods for all the differnt input and select fields
+ 		});
 	}
 	handleSubmit(evt) {
-		evt.preventDefault();
-		this.props.createTodo({ ...this.state, id: uuid() });
-		this.setState({ username: '', name: '', password: '', userType: '' });
+		evt.preventDefault();							     //No reload on button click
+		this.props.createTodo({ ...this.state, id: uuid() });			     //add the data into the state and also a uuid 
+		this.setState({ username: '', name: '', password: '', userType: '' });       // Resets the form after submition
 	}
 	handleClear(evt) {
-		evt.preventDefault();
-		this.setState({ username: '', name: '', password: '', userType: '' });
+		evt.preventDefault();                                                      //No reload on button click
+		this.setState({ username: '', name: '', password: '', userType: '' });     //Resets the form
 	}
 
 	render() {
-		let Grey = {
+		let Grey = {                                                                 {/* not possible*/}  
 			color: 'lightgrey'
 		};
 		return (
