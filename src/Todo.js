@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react';                  //Delete the file. Dont need it...Along with the css file
 import './Todo.css';
 
 class Todo extends Component {
