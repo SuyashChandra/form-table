@@ -6,15 +6,15 @@ import './TodoList.css';
 class TodoList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { todos: [] };
-		this.create = this.create.bind(this);
-		this.remove = this.remove.bind(this);
-		this.update = this.update.bind(this);
-		this.toggleCompletion = this.toggleCompletion.bind(this);
+		this.state = { todos: [] };                      //We are just initializing todos in our state here. 
+		this.create = this.create.bind(this);           // We need to bind the create funtion with the this method or it'll create an error. this is not bound lexically in JS. 
+		this.remove = this.remove.bind(this);            //Can be removed  
+		this.update = this.update.bind(this);		//Can be removed
+		this.toggleCompletion = this.toggleCompletion.bind(this);      //Can be removed
 	}
 	create(NewTodo) {
 		this.setState({
-			todos: [ ...this.state.todos, NewTodo ]
+			todos: [ ...this.state.todos, NewTodo ]                //We are adding the data from the form to the state. We get the data from NewTodo i.e. NewTodoForm.
 		});
 	}
 	remove(id) {
@@ -40,9 +40,10 @@ class TodoList extends Component {
 		});
 		this.setState({ todos: updatedTodos });
 	}
+	{//You can remove the remove update and toggleCompletion functions. They were initially for a different project}
 
 	render() {
-		const todos = this.state.todos.map((todo) => {
+		const todos = this.state.todos.map((todo) => {                              //Here we just retieve the data from the state(todos)         
 			return (
 				// <Todo
 				// 	key={todo.id}
@@ -54,15 +55,15 @@ class TodoList extends Component {
 				// 	completed={todo.completed}
 				// />
 				<tr>
-					<th>{todo.username}</th>
+					<th>{todo.username}</th>                            
 					<th>{todo.name}</th>
 					<th>{todo.password}</th>
 					<th>{todo.userType}</th>
-				</tr>
+				</tr>                           
 			);
 		});
 		return (
-			<div className="TodoList">
+			<div className="TodoList">                                              //Straightforward
 				<div className="top">
 					<div className="left">
 						<h1>Add User</h1>
@@ -71,7 +72,8 @@ class TodoList extends Component {
 						<h1>App > AddUser Page</h1>
 					</div>
 				</div>
-				<NewTodoForm createTodo={this.create} />
+				<NewTodoForm createTodo={this.create} />                         
+												////Here we render the NewTodoForm and pass in the method createTodo
 				<div className="Table">
 					<table className="width">
 						<caption>Users Table</caption>
@@ -79,12 +81,13 @@ class TodoList extends Component {
 							<tr>
 								<th>Username</th>
 								<th>Name</th>
-								<th>Password</th>
+								<th>Password</th>   
 								<th>TypeofUser</th>
 							</tr>
 						</thead>
-						<tbody>{todos}</tbody>
-					</table>
+						<tbody>{todos}</tbody>                                           
+													//Here We just pass in the todo we created in the render					
+			</table>
 				</div>
 			</div>
 		);
